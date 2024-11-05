@@ -47,7 +47,7 @@ export default function About() {
         duration: 1,
         ease: "easeOut",
       }}
-      className="px-20 pb-10 space-y-10"
+      className="px-20 pb-20 space-y-10"
     >
       <div className="space-y-5">
         <h2 className="text-4xl leading-[3.5rem] font-bold">
@@ -66,13 +66,13 @@ export default function About() {
         </p>
       </div>
       <div className="space-y-5">
-        <h3 className="text-2xl text-neutral-800 font-semibold ">
+        <h3 className="text-2xl text-neutral-800 dark:text-neutral-300 font-semibold ">
           Technologies
         </h3>
         <ul className="flex gap-4">
           {dataLanguagesCode.map((data, idx) => {
             return (
-              <li className="px-4 py-2 rounded-xl flex items-center justify-center gap-2 bg-indigo-100 border border-indigo-600">
+              <li className="px-4 py-2 rounded-xl dark:text-black flex items-center justify-center gap-2 bg-indigo-100 dark:bg-indigo-200 border border-indigo-600">
                 <Image
                   src={data.img}
                   alt="image de mes languages de programmation - Adrien legeleux - portofolio"
