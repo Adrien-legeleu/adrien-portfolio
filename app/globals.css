@@ -12,6 +12,11 @@ body {
   }
 }
 
+.drawer-content ::before,
+.drawer-content ::after {
+  display: none !important;
+}
+
 @layer base {
   :root {
     --background: 0 0% 98%;

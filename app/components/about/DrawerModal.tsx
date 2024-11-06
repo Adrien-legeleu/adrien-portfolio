@@ -1,6 +1,4 @@
 import * as React from "react";
-import { MinusIcon, PlusIcon } from "@radix-ui/react-icons";
-import { Bar, BarChart, ResponsiveContainer } from "recharts";
 
 import { Button } from "@/components/ui/button";
 import {
@@ -13,6 +11,9 @@ import {
   DrawerTitle,
   DrawerTrigger,
 } from "@/components/ui/drawer";
+import Image, { StaticImageData } from "next/image";
+import Link from "next/link";
+import { IconPinInvoke } from "@tabler/icons-react";
 
 const data = [
   {
@@ -56,77 +57,78 @@ const data = [
   },
 ];
 
-export default function DrawerDemo() {
-  const [goal, setGoal] = React.useState(350);
+interface DrawerProps {
+  project: {
+    img: StaticImageData;
+    title: string;
+    link: string;
+    languages: string[];
+    description: string;
+  };
+}
 
-  function onClick(adjustment: number) {
-    setGoal(Math.max(200, Math.min(400, goal + adjustment)));
-  }
-
+export default function DrawerDemo({ project }: DrawerProps) {
   return (
     <Drawer>
       <DrawerTrigger asChild>
-        <Button variant="outline">Open Drawer</Button>
+        <Image
+          src={project.img}
+          alt="image du project de mon portfolio adrien legeleux"
+          width={200}
+          height={200}
+          className="w-full rounded-3xl cursor-pointer"
+        />
       </DrawerTrigger>
       <DrawerContent>
-        <div className="mx-auto w-full max-w-sm">
-          <DrawerHeader>
-            <DrawerTitle>Move Goal</DrawerTitle>
-            <DrawerDescription>Set your daily activity goal.</DrawerDescription>
-          </DrawerHeader>
-          <div className="p-4 pb-0">
-            <div className="flex items-center justify-center space-x-2">
-              <Button
-                variant="outline"
-                size="icon"
-                className="h-8 w-8 shrink-0 rounded-full"
-                onClick={() => onClick(-10)}
-                disabled={goal <= 200}
-              >
-                <MinusIcon className="h-4 w-4" />
-                <span className="sr-only">Decrease</span>
-              </Button>
-              <div className="flex-1 text-center">
-                <div className="text-7xl font-bold tracking-tighter">
-                  {goal}
-                </div>
-                <div className="text-[0.70rem] uppercase text-muted-foreground">
-                  Calories/day
+        <div className=" w-full  overflow-y-auto py-5">
+          <div className=" max-w-lg mx-auto space-y-8">
+            <DrawerHeader>
+              <DrawerTitle className="text-3xl font-bold">
+                {project.title}
+              </DrawerTitle>
+              <DrawerDescription className="text-lg">
+                {project.description}
+              </DrawerDescription>
+            </DrawerHeader>
+            <div className="p-4 pb-0 space-y-8">
+              <Link href={project.link}>
+                <Image
+                  src={project.img}
+                  alt="image du project de mon portfolio adrien legeleux"
+                  width={200}
+                  height={200}
+                  className="w-full rounded-3xl cursor-pointer shadow-xl shadow-black/10"
+                />
+              </Link>
+              <div className="space-y-4">
+                <h4 className="text-xl font-semibold">Language utilisé</h4>
+                <div className="flex gap-4 items-center">
+                  {project.languages.map((lang, idx) => {
+                    return (
+                      <div
+                        key={`langaue de ${project.title} num ${idx}`}
+                        className="px-4 py-2 rounded-xl dark:text-black flex items-center justify-center gap-2 bg-indigo-100 dark:bg-indigo-200 border border-indigo-600"
+                      >
+                        <span>{lang}</span>
+                      </div>
+                    );
+                  })}
                 </div>
               </div>
-              <Button
-                variant="outline"
-                size="icon"
-                className="h-8 w-8 shrink-0 rounded-full"
-                onClick={() => onClick(10)}
-                disabled={goal >= 400}
-              >
-                <PlusIcon className="h-4 w-4" />
-                <span className="sr-only">Increase</span>
-              </Button>
             </div>
-            <div className="mt-3 h-[120px]">
-              <ResponsiveContainer width="100%" height="100%">
-                <BarChart data={data}>
-                  <Bar
-                    dataKey="goal"
-                    style={
-                      {
-                        fill: "hsl(var(--foreground))",
-                        opacity: 0.9,
-                      } as React.CSSProperties
-                    }
-                  />
-                </BarChart>
-              </ResponsiveContainer>
-            </div>
+
+            <DrawerFooter>
+              <Link href={project.link}>
+                <Button>
+                  {" "}
+                  <IconPinInvoke className="h-6 w-6" /> Voir le site
+                </Button>
+              </Link>
+              <DrawerClose asChild>
+                <Button variant="secondary">Cancel</Button>
+              </DrawerClose>
+            </DrawerFooter>
           </div>
-          <DrawerFooter>
-            <Button>Submit</Button>
-            <DrawerClose asChild>
-              <Button variant="outline">Cancel</Button>
-            </DrawerClose>
-          </DrawerFooter>
         </div>
       </DrawerContent>
     </Drawer>
