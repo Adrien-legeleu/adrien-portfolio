@@ -118,8 +118,8 @@ export default function DrawerDemo({ project }: DrawerProps) {
             </div>
 
             <DrawerFooter>
-              <Link href={project.link}>
-                <Button>
+              <Link href={project.link} className="w-full">
+                <Button className="w-full">
                   {" "}
                   <IconPinInvoke className="h-6 w-6" /> Voir le site
                 </Button>
