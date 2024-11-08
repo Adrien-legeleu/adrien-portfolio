@@ -12,6 +12,7 @@ export const projectsData = [
     title: "Naseem - Banque App",
     link: "https://app-banque.netlify.app/",
     languages: ["React", "Tailwind", "TypeScript"],
+    video: "",
     description:
       "Application bancaire avec une interface utilisateur interactive et des fonctionnalités de gestion financière.",
   },
@@ -20,6 +21,7 @@ export const projectsData = [
     title: "Le Resto",
     link: "https://le-resto.netlify.app/",
     languages: ["React", "Sass", "JavaScript"],
+    video: "",
     description:
       "Application de restaurant permettant de parcourir le menu et de passer des commandes en ligne.",
   },
@@ -28,6 +30,7 @@ export const projectsData = [
     title: "Lurex",
     link: "https://lurex.netlify.app/",
     languages: ["Next.js", "Styled Components", "JavaScript"],
+    video: "",
     description:
       "Site e-commerce spécialisé dans la vente de produits de luxe avec une gestion de panier.",
   },
@@ -36,6 +39,7 @@ export const projectsData = [
     title: "Or Lumière",
     link: "https://orlumiere.netlify.app/",
     languages: ["Vue.js", "Vuetify", "JavaScript"],
+    video: "video/video-orlumiere.mp4",
     description:
       "Site web de présentation pour une entreprise spécialisée dans l'éclairage, mettant en valeur leurs services et réalisations.",
   },
@@ -44,6 +48,7 @@ export const projectsData = [
     title: "Sturmayr",
     link: "https://sturmayr.netlify.app/",
     languages: ["Angular", "SCSS", "TypeScript"],
+    video: "",
     description:
       "Application web pour une entreprise de construction, présentant leurs projets et offres.",
   },
@@ -52,6 +57,7 @@ export const projectsData = [
     title: "Sushi Food",
     link: "https://sushifood.netlify.app/",
     languages: ["Next.js", "Tailwind", "JavaScript"],
+    video: "",
     description:
       "Site e-commerce permettant de commander des plats de sushi en ligne avec un système de gestion de commande.",
   },
@@ -60,6 +66,7 @@ export const projectsData = [
     title: "Villa Tyklouyou",
     link: "https://villa-tyklouyou.netlify.app/",
     languages: ["Gatsby", "CSS Modules", "JavaScript"],
+    video: "",
     description:
       "Site de présentation d'une villa de luxe, avec une galerie d'images et des informations sur les services disponibles.",
   },

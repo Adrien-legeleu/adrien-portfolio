@@ -64,6 +64,7 @@ interface DrawerProps {
     link: string;
     languages: string[];
     description: string;
+    video: string;
   };
 }
 
@@ -71,13 +72,22 @@ export default function DrawerDemo({ project }: DrawerProps) {
   return (
     <Drawer>
       <DrawerTrigger asChild>
-        <Image
-          src={project.img}
-          alt="image du project de mon portfolio adrien legeleux"
-          width={200}
-          height={200}
-          className="w-full rounded-3xl cursor-pointer"
-        />
+        <div className="group w-full h-[200px] rounded-3xl cursor-pointer shadow-xl dark:shadow-2xl shadow-black/30 dark:shadow-neutral-100/15">
+          <Image
+            src={project.img}
+            alt="image du project de mon portfolio adrien legeleux"
+            width={200}
+            height={200}
+            className="w-full  h-full rounded-3xl group-hover:hidden duration-300"
+          />
+          <video
+            src={project.video}
+            autoPlay
+            loop
+            muted
+            className="group-hover:block rounded-3xl hidden duration-300 w-full h-full object-contain"
+          ></video>
+        </div>
       </DrawerTrigger>
       <DrawerContent>
         <div className=" w-full  overflow-y-auto py-5">
@@ -97,7 +107,7 @@ export default function DrawerDemo({ project }: DrawerProps) {
                   alt="image du project de mon portfolio adrien legeleux"
                   width={200}
                   height={200}
-                  className="w-full rounded-3xl cursor-pointer shadow-xl shadow-black/10"
+                  className="w-full rounded-3xl cursor-pointer shadow-xl dark:shadow-2xl shadow-black/30 dark:shadow-neutral-100/20"
                 />
               </Link>
               <div className="space-y-4">
