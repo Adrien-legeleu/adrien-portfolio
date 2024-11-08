@@ -6,6 +6,9 @@ import project5 from "@/public/image/projects/sturmayr.netlify.app_(Nest Hub Max
 import project6 from "@/public/image/projects/sushifood.netlify.app_(Nest Hub Max).png";
 import project7 from "@/public/image/projects/villa-tyklouyou.netlify.app_(Nest Hub Max).png";
 import project8 from "@/public/image/projects/lucassportfolio.netlify.app_(Nest Hub Max).png";
+import OptimisedBadge from "@/app/components/about/badge/OptimisedBadge";
+import InnovativeBadge from "@/app/components/about/badge/InnovativeBadge";
+import ModernBadge from "@/app/components/about/badge/ModernBadge";
 
 export const projectsData = [
   {
@@ -13,20 +16,22 @@ export const projectsData = [
     title: "Naseem - Banque App",
     link: "https://app-banque.netlify.app/",
     languages: ["React", "Tailwind", "TypeScript"],
-    video: "video/video-bank.mp4",
+    video: "/video/video-bank.mp4", // Vérifie que ce chemin est correct dans ton dossier public
     color: "#090C18",
     description:
       "Application bancaire avec une interface utilisateur interactive et des fonctionnalités de gestion financière.",
+    badge: <OptimisedBadge />, // Badge avec ton composant OptimisedBadge
   },
   {
     img: project2,
     title: "Le Resto",
     link: "https://le-resto.netlify.app/",
     languages: ["React", "Sass", "JavaScript"],
-    video: "video/video-restaurant.mp4",
+    video: "/video/video-restaurant.mp4",
     color: "#21201E",
     description:
       "Application de restaurant permettant de parcourir le menu et de passer des commandes en ligne.",
+    badge: <OptimisedBadge />,
   },
   {
     img: project3,
@@ -47,6 +52,7 @@ export const projectsData = [
     color: "#FFFFFF",
     description:
       "Site web de présentation pour une entreprise spécialisée dans l'éclairage, mettant en valeur leurs services et réalisations.",
+    badge: <InnovativeBadge />,
   },
   {
     img: project5,
@@ -57,6 +63,7 @@ export const projectsData = [
     color: "#FFFFFF",
     description:
       "Application web pour une entreprise de construction, présentant leurs projets et offres.",
+    badge: <ModernBadge />,
   },
   {
     img: project6,
@@ -77,6 +84,7 @@ export const projectsData = [
     color: "#141342",
     description:
       "Site de présentation d'une villa de luxe, avec une galerie d'images et des informations sur les services disponibles.",
+    badge: <InnovativeBadge />,
   },
   {
     img: project8,
@@ -86,5 +94,6 @@ export const projectsData = [
     video: "video/video-lucas.mp4",
     color: "#1B1E20",
     description: "Portfoliio d'un UI UX designer",
+    badge: <OptimisedBadge />,
   },
 ];
