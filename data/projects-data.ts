@@ -5,6 +5,7 @@ import project4 from "@/public/image/projects/orlumiere.netlify.app_(Nest Hub) (
 import project5 from "@/public/image/projects/sturmayr.netlify.app_(Nest Hub Max).png";
 import project6 from "@/public/image/projects/sushifood.netlify.app_(Nest Hub Max).png";
 import project7 from "@/public/image/projects/villa-tyklouyou.netlify.app_(Nest Hub Max).png";
+import project8 from "@/public/image/projects/lucassportfolio.netlify.app_(Nest Hub Max).png";
 
 export const projectsData = [
   {
@@ -12,7 +13,8 @@ export const projectsData = [
     title: "Naseem - Banque App",
     link: "https://app-banque.netlify.app/",
     languages: ["React", "Tailwind", "TypeScript"],
-    video: "",
+    video: "video/video-bank.mp4",
+    color: "#090C18",
     description:
       "Application bancaire avec une interface utilisateur interactive et des fonctionnalités de gestion financière.",
   },
@@ -21,7 +23,8 @@ export const projectsData = [
     title: "Le Resto",
     link: "https://le-resto.netlify.app/",
     languages: ["React", "Sass", "JavaScript"],
-    video: "",
+    video: "video/video-restaurant.mp4",
+    color: "#21201E",
     description:
       "Application de restaurant permettant de parcourir le menu et de passer des commandes en ligne.",
   },
@@ -30,7 +33,8 @@ export const projectsData = [
     title: "Lurex",
     link: "https://lurex.netlify.app/",
     languages: ["Next.js", "Styled Components", "JavaScript"],
-    video: "",
+    video: "video/video-lurex.mp4",
+    color: "#1B1B1B",
     description:
       "Site e-commerce spécialisé dans la vente de produits de luxe avec une gestion de panier.",
   },
@@ -40,6 +44,7 @@ export const projectsData = [
     link: "https://orlumiere.netlify.app/",
     languages: ["Vue.js", "Vuetify", "JavaScript"],
     video: "video/video-orlumiere.mp4",
+    color: "#FFFFFF",
     description:
       "Site web de présentation pour une entreprise spécialisée dans l'éclairage, mettant en valeur leurs services et réalisations.",
   },
@@ -48,7 +53,8 @@ export const projectsData = [
     title: "Sturmayr",
     link: "https://sturmayr.netlify.app/",
     languages: ["Angular", "SCSS", "TypeScript"],
-    video: "",
+    video: "video/video-sturmayr.mp4",
+    color: "#FFFFFF",
     description:
       "Application web pour une entreprise de construction, présentant leurs projets et offres.",
   },
@@ -57,7 +63,8 @@ export const projectsData = [
     title: "Sushi Food",
     link: "https://sushifood.netlify.app/",
     languages: ["Next.js", "Tailwind", "JavaScript"],
-    video: "",
+    video: "video/video-sushi.mp4",
+    color: "#0B1517",
     description:
       "Site e-commerce permettant de commander des plats de sushi en ligne avec un système de gestion de commande.",
   },
@@ -66,8 +73,18 @@ export const projectsData = [
     title: "Villa Tyklouyou",
     link: "https://villa-tyklouyou.netlify.app/",
     languages: ["Gatsby", "CSS Modules", "JavaScript"],
-    video: "",
+    video: "video/video-tyklouyou.mp4",
+    color: "#141342",
     description:
       "Site de présentation d'une villa de luxe, avec une galerie d'images et des informations sur les services disponibles.",
+  },
+  {
+    img: project8,
+    title: "Lucas portfolio",
+    link: "https://lucassportfolio.netlify.app/",
+    languages: ["Gatsby", "CSS Modules", "JavaScript"],
+    video: "video/video-lucas.mp4",
+    color: "#1B1E20",
+    description: "Portfoliio d'un UI UX designer",
   },
 ];

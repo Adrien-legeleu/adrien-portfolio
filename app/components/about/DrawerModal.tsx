@@ -65,6 +65,7 @@ interface DrawerProps {
     languages: string[];
     description: string;
     video: string;
+    color: string;
   };
 }
 
@@ -72,20 +73,24 @@ export default function DrawerDemo({ project }: DrawerProps) {
   return (
     <Drawer>
       <DrawerTrigger asChild>
-        <div className="group w-full h-[200px] rounded-3xl cursor-pointer shadow-xl dark:shadow-2xl shadow-black/30 dark:shadow-neutral-100/15">
+        <div
+          className="group w-full h-[200px] relative rounded-3xl cursor-pointer shadow-xl dark:shadow-2xl shadow-black/30 dark:shadow-neutral-100/15"
+          style={{ backgroundColor: project.color }}
+        >
           <Image
             src={project.img}
             alt="image du project de mon portfolio adrien legeleux"
             width={200}
             height={200}
-            className="w-full  h-full rounded-3xl group-hover:hidden duration-300"
+            className="w-full  h-full rounded-3xl group-hover:opacity-0 
+            absolute top-0 left-0 "
           />
           <video
             src={project.video}
             autoPlay
             loop
             muted
-            className="group-hover:block rounded-3xl hidden duration-300 w-full h-full object-contain"
+            className="group-hover:opacity-100 rounded-3xl opacity-0 duration-500 ease-out w-full h-full object-contain"
           ></video>
         </div>
       </DrawerTrigger>
@@ -135,7 +140,7 @@ export default function DrawerDemo({ project }: DrawerProps) {
                 </Button>
               </Link>
               <DrawerClose asChild>
-                <Button variant="secondary">Cancel</Button>
+                <Button variant="secondary">Annuler</Button>
               </DrawerClose>
             </DrawerFooter>
           </div>
