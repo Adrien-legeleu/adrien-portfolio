@@ -47,29 +47,29 @@ export default function About() {
         duration: 1,
         ease: "easeOut",
       }}
-      className=" pb-20 space-y-10"
+      className=" pb-20 space-y-10 max-w-[1400px] mx-auto"
     >
       <div className="space-y-5">
-        <h2 className="text-4xl leading-[3.5rem] font-bold">
+        <h2 className="text-4xl leading-[3.5rem] font-bold md:text-left text-center">
           Je suis un développeur <br /> spécialisé en{" "}
           <Highlight className="text-black dark:text-white">NEXT JS</Highlight>
         </h2>
-        <p className="text-muted-foreground max-w-xl leading-relaxed">
-          Fort de deux années d&apos; expérience, j&apos; aide les entreprises
-          et les entrepreneurs à concevoir des applications web modernes,
-          rapides et scalables. <br /> Mon expertise en{" "}
+        <p className="text-muted-foreground max-w-xl leading-relaxed md:text-left text-center">
+          Fort de deux années d&apos;expérience, j&apos;aide les entreprises et
+          les entrepreneurs à concevoir des applications web modernes, rapides
+          et scalables. <br /> Mon expertise en{" "}
           <Highlight className="text-black dark:text-white">Next.js</Highlight>{" "}
           me permet de créer des solutions sur mesure, adaptées aux besoins et
           aux objectifs de chaque client. <br /> Chaque projet est une
-          opportunité d&apos; apporter des solutions techniques optimisées et de
-          soigner l&apos; expérience utilisateur.
+          opportunité d&apos;apporter des solutions techniques optimisées et de
+          soigner l&apos;expérience utilisateur.
         </p>
       </div>
       <div className="space-y-5">
-        <h3 className="text-2xl text-neutral-800 dark:text-neutral-300 font-semibold ">
+        <h3 className="text-2xl text-neutral-800 dark:text-neutral-300 font-semibold  ">
           Technologies
         </h3>
-        <ul className="flex gap-4">
+        <ul className="flex gap-4 flex-wrap">
           {dataLanguagesCode.map((data, idx) => {
             return (
               <li className="px-4 py-2 rounded-xl dark:text-black flex items-center justify-center gap-2 bg-indigo-100 dark:bg-indigo-200 border border-indigo-600">

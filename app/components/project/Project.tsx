@@ -4,9 +4,11 @@ import { projectsData } from "@/data/projects-data";
 
 export default function Project() {
   return (
-    <div className="space-y-16 pb-20">
-      <h2 className="text-4xl font-bold">Mes Projets</h2>
-      <ul className="grid grid-cols-3 items-center justify-center w-full gap-20">
+    <div className="space-y-16 pb-20 max-w-[1400px] mx-auto">
+      <h2 className="text-4xl font-bold md:text-left text-center">
+        Mes Projets
+      </h2>
+      <ul className="grid xl:grid-cols-3 md:grid-cols-2  items-center justify-center w-full gap-20">
         {projectsData.map((project, idx) => {
           return (
             <li

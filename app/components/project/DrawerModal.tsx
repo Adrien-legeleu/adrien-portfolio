@@ -32,7 +32,7 @@ export default function DrawerDemo({ project }: DrawerProps) {
     <Drawer>
       <DrawerTrigger asChild>
         <div
-          className="group w-full h-[200px] relative rounded-3xl cursor-pointer shadow-xl dark:shadow-2xl shadow-black/30 dark:shadow-neutral-100/15"
+          className="group h-[200px]  aspect-video relative rounded-3xl cursor-pointer shadow-xl dark:shadow-2xl shadow-black/30 dark:shadow-neutral-100/15"
           style={{ backgroundColor: project.color }}
         >
           <div className="absolute top-2 right-2 z-50 flex items-center justify-center">
@@ -41,9 +41,9 @@ export default function DrawerDemo({ project }: DrawerProps) {
           <Image
             src={project.img}
             alt="image du project de mon portfolio adrien legeleux"
-            width={200}
-            height={200}
-            className="w-full h-full rounded-3xl duration-300 group-hover:opacity-0 absolute top-0 left-0 "
+            width={400}
+            height={400}
+            className="w-full h-full object-cover rounded-3xl duration-300 group-hover:opacity-0 absolute top-0 left-0 "
           />
           <video
             src={project.video}
@@ -64,17 +64,17 @@ export default function DrawerDemo({ project }: DrawerProps) {
               <DrawerDescription className="text-lg">
                 {project.description}
               </DrawerDescription>
-              <div className="flex items-center justify-start">
+              <div className="flex  items-center justify-start">
                 {project.badge}
               </div>
             </DrawerHeader>
             <div className="p-4 pb-0 space-y-8">
-              <Link href={project.link}>
+              <Link href={project.link} target="_blank">
                 <Image
                   src={project.img}
                   alt="image du project de mon portfolio adrien legeleux"
-                  width={200}
-                  height={200}
+                  width={400}
+                  height={400}
                   className="w-full rounded-3xl cursor-pointer shadow-xl dark:shadow-2xl shadow-black/30 dark:shadow-neutral-100/20"
                 />
               </Link>
@@ -93,7 +93,7 @@ export default function DrawerDemo({ project }: DrawerProps) {
               </div>
             </div>
             <DrawerFooter>
-              <Link href={project.link} className="w-full">
+              <Link href={project.link} target="_blank" className="w-full">
                 <Button className="w-full">
                   <IconPinInvoke className="h-6 w-6" /> Voir le site
                 </Button>
