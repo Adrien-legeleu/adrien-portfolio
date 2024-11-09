@@ -3,6 +3,7 @@ const {
   default: flattenColorPalette,
 } = require("tailwindcss/lib/util/flattenColorPalette");
 const svgToDataUri = require("mini-svg-data-uri");
+const { fontFamily } = require("tailwindcss/defaultTheme");
 
 const config: Config = {
   darkMode: ["class"],
@@ -16,6 +17,9 @@ const config: Config = {
       screens: {
         "430": "430px",
         "1430": "1430px",
+      },
+      fontFamily: {
+        montserrat: ["Montserrat", "sans-serif"], // Définir Montserrat comme police par défaut
       },
       colors: {
         background: "hsl(var(--background))",

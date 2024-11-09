@@ -29,7 +29,7 @@ export default function Landing() {
       <Spotlight className="-top-20 left-0  md:-top-20" />
       <div className="max-w-[1400px] mx-auto md:flex-row flex-col-reverse flex items-center gap-8 justify-between h-full w-full">
         <div className="space-y-5">
-          <h1 className="md:text-left text-center font-semibold text-neutral-700 dark:text-neutral-300 text-4xl sm:text-5xl leading-[3.8rem]">
+          <h1 className="md:text-left font-montserrat text-center font-semibold text-neutral-700 dark:text-neutral-300 text-4xl sm:text-5xl leading-[3.8rem]">
             <span
               className={cn(
                 "group relative font-bold  backdrop-blur-sm duration-500 ease-out [--bg-size:300%] "
@@ -58,7 +58,7 @@ export default function Landing() {
             </span>
             <br /> Je m'apelle Adrien
           </h1>
-          <p className="md:text-left text-center max-w-md text-muted-foreground leading-relaxed">
+          <p className="md:text-left font-montserrat text-center max-w-md text-muted-foreground leading-relaxed">
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. At
             quisquam repudiandae aperiam! Alias, nobis blanditiis!
           </p>
