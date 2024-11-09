@@ -34,16 +34,6 @@ export const projectsData = [
     badge: <OptimisedBadge />,
   },
   {
-    img: project3,
-    title: "Lurex",
-    link: "https://lurex.netlify.app/",
-    languages: ["Next.js", "Styled Components", "JavaScript"],
-    video: "video/video-lurex.mp4",
-    color: "#1B1B1B",
-    description:
-      "Site e-commerce spécialisé dans la vente de produits de luxe avec une gestion de panier.",
-  },
-  {
     img: project4,
     title: "Or Lumière",
     link: "https://orlumiere.netlify.app/",
@@ -72,6 +62,7 @@ export const projectsData = [
     languages: ["Next.js", "Tailwind", "JavaScript"],
     video: "video/video-sushi.mp4",
     color: "#0B1517",
+    badge: undefined,
     description:
       "Site e-commerce permettant de commander des plats de sushi en ligne avec un système de gestion de commande.",
   },
@@ -95,5 +86,16 @@ export const projectsData = [
     color: "#1B1E20",
     description: "Portfoliio d'un UI UX designer",
     badge: <OptimisedBadge />,
+  },
+  {
+    img: project3,
+    title: "Lurex",
+    link: "https://lurex.netlify.app/",
+    languages: ["Next.js", "Styled Components", "JavaScript"],
+    video: "video/video-lurex.mp4",
+    color: "#1B1B1B",
+    badge: undefined,
+    description:
+      "Site e-commerce spécialisé dans la vente de produits de luxe avec une gestion de panier.",
   },
 ];

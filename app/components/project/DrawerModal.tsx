@@ -23,7 +23,7 @@ export interface DrawerProps {
     description: string;
     video: string;
     color: string;
-    badge: any;
+    badge: JSX.Element | undefined;
   };
 }
 
@@ -36,7 +36,7 @@ export default function DrawerDemo({ project }: DrawerProps) {
           style={{ backgroundColor: project.color }}
         >
           <div className="absolute top-2 right-2 z-50 flex items-center justify-center">
-            {project.badge} {/* Affiche le badge ici */}
+            {project.badge}
           </div>
           <Image
             src={project.img}
@@ -64,6 +64,9 @@ export default function DrawerDemo({ project }: DrawerProps) {
               <DrawerDescription className="text-lg">
                 {project.description}
               </DrawerDescription>
+              <div className="flex items-center justify-start">
+                {project.badge}
+              </div>
             </DrawerHeader>
             <div className="p-4 pb-0 space-y-8">
               <Link href={project.link}>

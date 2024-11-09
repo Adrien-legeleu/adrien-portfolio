@@ -47,7 +47,7 @@ export default function About() {
         duration: 1,
         ease: "easeOut",
       }}
-      className="px-20 pb-20 space-y-10"
+      className=" pb-20 space-y-10"
     >
       <div className="space-y-5">
         <h2 className="text-4xl leading-[3.5rem] font-bold">

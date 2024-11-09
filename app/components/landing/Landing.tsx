@@ -6,6 +6,7 @@ import ShinyButton from "@/components/ui/shiny-button";
 import { IconChevronRight } from "@tabler/icons-react";
 import { cn } from "@/lib/utils";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 export default function Landing() {
   return (
@@ -17,7 +18,7 @@ export default function Landing() {
         duration: 0.8,
         ease: "easeInOut",
       }}
-      className="h-screen w-full flex items-center gap-8 justify-between relative px-20"
+      className="h-screen w-full flex items-center gap-8 justify-between relative "
     >
       <div className="space-y-5">
         <h1 className="text-left font-semibold text-neutral-700 dark:text-neutral-300 text-5xl leading-[3.8rem]">
@@ -54,11 +55,13 @@ export default function Landing() {
           repudiandae aperiam! Alias, nobis blanditiis!
         </p>
         <div className="pt-5">
-          <ShinyButton>
-            <div className="flex gap-2 items-center">
-              Me contactez <IconChevronRight className="h-5 w-5" />
-            </div>
-          </ShinyButton>
+          <Link href="#contact">
+            <ShinyButton>
+              <div className="flex gap-2 items-center">
+                Me contactez <IconChevronRight className="h-5 w-5" />
+              </div>
+            </ShinyButton>
+          </Link>
         </div>
       </div>
       <Image
