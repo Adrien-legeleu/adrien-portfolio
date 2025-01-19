@@ -6,9 +6,9 @@ import project5 from "@/public/image/projects/sturmayr.netlify.app_(Nest Hub Max
 import project6 from "@/public/image/projects/sushifood.netlify.app_(Nest Hub Max).png";
 import project7 from "@/public/image/projects/villa-tyklouyou.netlify.app_(Nest Hub Max).png";
 import project8 from "@/public/image/projects/lucassportfolio.netlify.app_(Nest Hub Max).png";
-import OptimisedBadge from "@/app/components/about/badge/OptimisedBadge";
-import InnovativeBadge from "@/app/components/about/badge/InnovativeBadge";
-import ModernBadge from "@/app/components/about/badge/ModernBadge";
+import OptimisedBadge from "@/app/components/project/badge/OptimisedBadge";
+import InnovativeBadge from "@/app/components/project/badge/InnovativeBadge";
+import ModernBadge from "@/app/components/project/badge/ModernBadge";
 
 export const projectsData = [
   {
